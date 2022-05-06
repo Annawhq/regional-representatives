@@ -1,0 +1,76 @@
+﻿<Window x:Class="RegRepres.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="Региональные представители фирмы" Height="600" Width="1400">
+    <DockPanel >
+        <TabControl >
+            <TabItem Header="Сотрудники">
+                <DockPanel>
+                    <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+                        <Button Click="Employee_Add_Button_Click">Добавить</Button>
+                        <Button Click="Employee_Update_Button_Click">Редактировать</Button>
+                        <Button Click="Employee_Delete_Button_Click">Удалить</Button>
+                    </StackPanel>
+                    <DataGrid x:Name="dgEmployee">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}"/>
+                            <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}"/>
+                            <DataGridTextColumn Header="Отчество" Binding="{Binding SecondName}"/>
+                            <DataGridTextColumn Header="Должность" Binding="{Binding Title}"/>
+                            <DataGridTextColumn Header="День рождения" Binding="{Binding Birthday}"/>
+                            <DataGridTextColumn Header="Адрес" Binding="{Binding Adress}"/>
+                            <DataGridTextColumn Header="Город" Binding="{Binding City}"/>
+                            <DataGridTextColumn Header="Область или край" Binding="{Binding Region}"/>
+                            <DataGridTextColumn Header="Номер телефона" Binding="{Binding Phone}"/>
+                            <DataGridTextColumn Header="Электронная почта" Binding="{Binding Email}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </TabItem>
+            <TabItem Header="Область">
+                <DockPanel>
+                    <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+                        <Button Click="Region_Add_Button_Click">Добавить</Button>
+                        <Button Click="Region_Update_Button_Click">Редактировать</Button>
+                        <Button Click="Region_Delete_Button_Click">Удалить</Button>
+                    </StackPanel>
+                    <DataGrid x:Name="dgRegion">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Наименование области или края" Binding="{Binding RegionDiscription}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </TabItem>
+            <TabItem Header="Город">
+                <DockPanel>
+                    <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+                        <Button Click="Territory_Add_Button_Click">Добавить</Button>
+                        <Button Click="Territory_Update_Button_Click">Редактировать</Button>
+                        <Button Click="Territory_Delete_Button_Click">Удалить</Button>
+                    </StackPanel>
+                    <DataGrid x:Name="dgTerritory">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Наименование области или края" Binding="{Binding Region}"/>
+                            <DataGridTextColumn Header="Название города" Binding="{Binding Discription}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </TabItem>
+            <TabItem Header="Область сотрудника">
+                <DockPanel>
+                    <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+                        <Button Click="EmployeeTerritory_Add_Button_Click">Добавить</Button>
+                        <Button Click="EmployeeTerritory_Update_Button_Click">Редактировать</Button>
+                        <Button Click="EmployeeTerritory_Delete_Button_Click">Удалить</Button>
+                    </StackPanel>
+                    <DataGrid x:Name="dgEmployeeTerritory">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Сотрудник" Binding="{Binding Employee}"/>
+                            <DataGridTextColumn Header="Наименование области или края" Binding="{Binding Territory}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Window>

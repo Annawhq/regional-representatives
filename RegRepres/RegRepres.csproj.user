@@ -7,7 +7,36 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
+    <Compile Update="View\WindowEmployee.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\WindowEmployeeTerritory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\WindowRegion.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\WindowTerritory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\Main.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\WindowEmployee.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\WindowEmployeeTerritory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\WindowRegion.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\WindowTerritory.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -1,0 +1,21 @@
+﻿<Window x:Class="RegRepres.View.WindowEmployeeTerritory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegRepres.View"
+        mc:Ignorable="d"
+        Title="WindowTerritory" Height="400" Width="500">
+    <Grid>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+            <TextBlock Style="{StaticResource tbStyle}" Text="Фамилия сотрудника:"/>
+            <ComboBox SelectedValuePath="Id" DisplayMemberPath="LastName" x:Name="cbEmployeeId" />
+            <TextBlock Style="{StaticResource tbStyle}" Text="Название области или края:"/>
+            <ComboBox SelectedValuePath="Id" DisplayMemberPath="Discription" x:Name="cbTerritoryId" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="btnAdd" Click="Button_Click_Add" Margin="5" Padding="5" Visibility="Collapsed">Добавить</Button>
+                <Button x:Name="btnUpdate" Click="Button_Click_Update" Margin="5" Padding="5" Visibility="Collapsed">Обновить</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
